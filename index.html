@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5/CSS3 Responsive Theme</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+     <script src="js/jquery-3.3.1.js"></script>
+     <script src="js/script.js"></script>
+     <script src="js/font-awesome.js"></script>
+
+     <script>
+    $(document).ready(function(){
+    var readMoreHtml = $(".read-more").html();
+    var lessText = readMoreHtml.substr(0, 100);
+
+    if(readMoreHtml.length > 50) {
+        $(".read-more").html(lessText).append("<a href=''class='read-more-link'> Show more</a>");
+    }else {
+        $(".read-more").html(readMoreHtml);
+    }
+    $("body").on("click", ".read-more-link", function(event){
+        event.preventDefault()
+        $(this).parent(".read-more").html(readMoreHtml).append("<a href=''class='show-less-link'> Show less</a>")
+    })
+    $("body").on("click", ".show-less-link", function(){
+        event.preventDefault()
+        $(this).parent(".read-more").html(readMoreHtml.substr(0,100)).append("<a href=''class='read-more-link'> Show more</a>")
+    })
+})
+</script>
+</head>
+<body class="body" onload="LoadFunction()">
+        <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br><br><br>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Courses</a>
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="openNav()"><i class="fas fa-bars"></i></button>  
+                
+              </div>
+    <header class="mainheader">
+        <img src="img/lci2.png">
+
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="mainContent">
+        <div class="content">
+            <article class="topcontent">
+                <h3>Legacy Computer Institute</h3>
+                <h4><em>Impacting Life Changing Skills</h4></em>
+                <a href="" id="vidBtn" onclick="window.open('courses.html','_blank')">courses</a>                
+            </article>
+
+            <article class="bottomcontent">
+                <header>
+                    <h2><a href="#" title="Second post">Second Post</a></h2>
+                </header>
+                <footer>
+                    <p class="post-info">This post is written by Emmanuel</p>
+                </footer>
+
+                <content>
+                    <a href="#"><img src="img/sme.jpg" class="post-image" title="Solomon Mashat"></a>                     
+                    <p class="read-more">
+                    Integer in sapien. Donec quis nibh at felis congue commodo. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Duis viverra diam non justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In rutrum. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Integer lacinia. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Nunc dapibus tortor vel mi dapibus sollicitudin.</p>
+                </content>
+            </article>
+
+            
+            <article class="bottomcontent">
+                <header>
+                    <h2><a href="#" title="Third post">Third Post</a></h2>
+                </header>
+                <footer>
+                    <p class="post-info">This post is written by Emmanuel</p>
+                </footer>
+
+                <content>
+                    <a href="#"><img src="img/mylife.jpg" class="post-image" title="Anthonia Anigbo"></a>                                         
+                    <p class="read-more">
+                    Integer in sapien. Donec quis nibh at felis congue commodo. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Duis viverra diam non justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In rutrum. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Integer lacinia. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Nunc dapibus tortor vel mi dapibus sollicitudin.</p>
+                </content>
+            </article>
+
+            <article class="bottomcontent">
+                <header>
+                    <h2><a href="#" title="Fourth post">Fourth Post</a></h2>
+                </header>
+                <footer>
+                    <p class="post-info">This post is written by Emmanuel</p>
+                </footer>
+
+                <content>
+                    <a href="#"><img src="img/sme.jpg" class="post-image" title="Emmanuel Solomon"></a>                    
+                    <p class="read-more">
+                    Integer in sapien. Donec quis nibh at felis congue commodo. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Duis viverra diam non justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In rutrum. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Integer lacinia. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Nunc dapibus tortor vel mi dapibus sollicitudin.</p>
+                </content>
+            </article>
+
+           
+        </div>
+    </div>
+    <aside class="top-sidebar">
+        <article>
+            <h2>Top sidebar</h2>
+            <p>Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus.</p>
+        </article>
+    </aside>
+    <aside class="middle-sidebar">
+        <article>
+            <h2>Middle sidebar</h2>
+            <p>Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus.</p>
+        </article>
+    </aside>
+    <aside class="bottom-sidebar">
+        <article>
+            <h2>Bottom sidebar</h2>
+            <p>Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus.</p>
+        </article>
+    </aside>
+     
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+            <p>Integer in sapien. Donec quis nibh at felis congue commodo. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Duis viverra diam non justo. Pellentesque habitant morbi tristique senectus</p>
+          </div>
+        
+        </div>
+        
+        <script> 
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        function LoadFunction() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+        
+        
+    <footer class="mainFooter">
+        <p>Copyright &copy; 2019 <a href="#" title="SME">SME.com</a>  
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a> 
+            </div>
+            
+        
+    </footer>
+    
+</body>
+</html>
